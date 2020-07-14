@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="ru.impression.uigen_recycler_view_example.MainFragmentViewModel" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ru.impression.uigen_recycler_view.UigenRecyclerViewComponent
+            data="@{viewModel.things}"
+            getItemBindingClass="@{() -> viewModel.itemThingBindingClass}"
+            viewModel="@{viewModel}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+</layout>
