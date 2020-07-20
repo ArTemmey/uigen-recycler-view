@@ -21,7 +21,6 @@ interface Identifiable {
 
 @MakeComponent
 class UigenRecyclerView : ComponentScheme<RecyclerView, UigenRecyclerViewModel>({ viewModel ->
-    layoutManager = viewModel.layoutManager
     layoutManager ?: run { layoutManager = LinearLayoutManager(context) }
     (adapter as? Adapter)
         ?.let { adapter ->
@@ -110,9 +109,6 @@ class UigenRecyclerViewModel : ComponentViewModel() {
 
     @Prop
     var viewModel: ComponentViewModel? by state(null)
-
-    @Prop
-    var layoutManager: RecyclerView.LayoutManager? by state(null)
 
     interface GetItemBindingClass {
         fun get(itemData: Any?): KClass<out ViewDataBinding>?
