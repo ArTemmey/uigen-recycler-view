@@ -75,8 +75,11 @@ class UigenRecyclerView : ComponentScheme<RecyclerView, UigenRecyclerViewModel>(
                         && (data == null || parameterTypes[0].isAssignableFrom(data::class.java))
             }?.invoke(holder.binding, data)
             viewModel?.let {
-                holder.binding::class.java.getDeclaredMethod("setViewModel", it::class.java)
-                    .invoke(holder.binding, it)
+                try {
+                    holder.binding::class.java.getDeclaredMethod("setViewModel", it::class.java)
+                        .invoke(holder.binding, it)
+                } catch (e: NoSuchMethodException) {
+                }
             }
         }
 
