@@ -33,8 +33,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.github.ArtemiyDmtrvch.ui-generator:ui-generator-base:+'
-    implementation 'com.github.ArtemiyDmtrvch.ui-generator:ui-generator-annotations:+'
+    implementation 'com.github.ArtemiyDmtrvch.ui-generator:ui-generator-base:ccd36e20c4'
+    implementation 'com.github.ArtemiyDmtrvch.ui-generator:ui-generator-annotations:ccd36e20c4'
     //kapt 'com.github.ArtemiyDmtrvch.ui-generator:ui-generator-processor:+'
     api "androidx.recyclerview:recyclerview:1.1.0"
     implementation 'androidx.core:core-ktx:1.3.0'
