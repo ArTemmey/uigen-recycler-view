@@ -70,21 +70,21 @@ class UigenRecyclerViewComponent @JvmOverloads constructor(
         @BindingAdapter("getItemBindingClass")
         fun setGetItemBindingClass(view: UigenRecyclerViewComponent,
                                    value: UigenRecyclerViewModel.GetItemBindingClass?) {
-            if (value == view.viewModel.getItemBindingClass) return
+            if (value === view.viewModel.getItemBindingClass) return
             view.viewModel::getItemBindingClass.set(view.viewModel, value)
         }
 
         @JvmStatic
         @BindingAdapter("data")
         fun setData(view: UigenRecyclerViewComponent, value: List<*>?) {
-            if (value == view.viewModel.data) return
+            if (value === view.viewModel.data) return
             view.viewModel::data.set(view.viewModel, value)
         }
 
         @JvmStatic
         @BindingAdapter("viewModel")
         fun setViewModel(view: UigenRecyclerViewComponent, value: ComponentViewModel?) {
-            if (value == view.viewModel.viewModel) return
+            if (value === view.viewModel.viewModel) return
             view.viewModel::viewModel.set(view.viewModel, value)
         }
     }
